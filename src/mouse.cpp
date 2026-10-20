@@ -19,7 +19,7 @@ int main() {
                 return 0;
             }
         }
-        s.position() = sf::Vector2f(sf::Mouse::getPosition(window));
+        s.position() = window.mapPixelToCoords(sf::Mouse::getPosition(window));
         sf::RenderStates states{};
         window.clear(sf::Color::White);
         s.draw(window, states);
